@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Receba a Receita no WhatsApp</title>
+  
+  <!-- Pixel do Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- Fim do Pixel -->
+  
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 60px;
+      background: #fffaf0;
+    }
+    h1 { color: #d62828; }
+    a.botao {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #03a678;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Descubra a Receita Natural que Ajuda a Reduzir Medidas!</h1>
+  <p>Clique abaixo e receba no WhatsApp:</p>
+  <a 
+    class="botao" 
+    href="https://wa.me/5521992566475?text=Quero+a+receita" 
+    onclick="fbq('track', 'Lead');"
+  >
+    Receber Receita no WhatsApp
+  </a>
+</body>
+</html>
