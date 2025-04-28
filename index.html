@@ -44,6 +44,7 @@
       background-attachment: fixed;
       background-blend-mode: overlay;
       background-color: rgba(248, 244, 233, 0.9);
+      overflow-x: hidden;
     }
     
     .container {
@@ -76,6 +77,9 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
     }
     
     h2 {
@@ -85,6 +89,9 @@
       font-weight: 600;
       position: relative;
       display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.2s;
     }
     
     h2::after {
@@ -104,6 +111,9 @@
       margin-bottom: 30px;
       font-weight: 500;
       font-style: italic;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.1s;
     }
     
     .benefit-card {
@@ -113,11 +123,17 @@
       margin: 25px 0;
       text-align: left;
       border-left: 4px solid var(--accent);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.8s ease, transform 0.8s ease;
+      opacity: 0;
+      transform: translateY(30px);
     }
     
+    .benefit-card:nth-child(1) { transition-delay: 0.3s; }
+    .benefit-card:nth-child(2) { transition-delay: 0.4s; }
+    .benefit-card:nth-child(3) { transition-delay: 0.5s; }
+    
     .benefit-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px) !important;
     }
     
     .benefit-card i {
@@ -142,6 +158,9 @@
       margin: 30px 0;
       text-align: left;
       border: 1px dashed var(--primary);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.4s;
     }
     
     .whatsapp-reason i {
@@ -160,7 +179,7 @@
       border-radius: 50px;
       display: inline-block;
       box-shadow: 0 5px 25px rgba(37, 211, 102, 0.3);
-      transition: all 0.3s ease;
+      transition: all 0.3s ease, opacity 0.8s ease, transform 0.8s ease;
       margin: 35px 0;
       position: relative;
       z-index: 2;
@@ -170,25 +189,18 @@
       max-width: 350px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      opacity: 0;
+      transform: translateY(30px);
     }
+    
+    .botao-topo { transition-delay: 0.2s; }
+    .botao-meio { transition-delay: 0.5s; }
+    .botao-rodape { transition-delay: 0.6s; }
     
     .botao:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.02) !important;
       box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    }
-    
-    .botao-topo {
-      margin-top: 10px;
-      margin-bottom: 40px;
-    }
-    
-    .botao-meio {
-      margin: 40px 0;
-    }
-    
-    .botao-rodape {
-      margin-bottom: 20px;
     }
     
     .destaque {
@@ -208,6 +220,9 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
     }
     
     .recipe-preview {
@@ -218,6 +233,9 @@
       border: 1px dashed var(--accent);
       position: relative;
       text-align: left;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.3s;
     }
     
     .recipe-preview:before {
@@ -266,6 +284,9 @@
       text-align: center;
       border: 1px solid rgba(212, 167, 98, 0.3);
       position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.5s;
     }
     
     .testimonial i {
@@ -297,6 +318,14 @@
       z-index: 3;
       padding-top: 20px;
       border-top: 1px solid rgba(212, 167, 98, 0.3);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease 0.6s;
+    }
+    
+    .animate {
+      opacity: 1;
+      transform: translateY(0);
     }
     
     @media (max-width: 768px) {
@@ -406,5 +435,36 @@
       <p>Não coletamos dados sem consentimento. Este site não possui vínculo com Meta Platforms Inc.</p>
     </div>
   </div>
+
+  <script>
+    // Observador de elementos para animação ao rolar
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    // Elementos que serão observados
+    const elementsToAnimate = document.querySelectorAll(
+      'h1, .subtitle, .whatsapp-badge, .botao, .recipe-preview, h2, .benefit-card, .whatsapp-reason, .testimonial, .disclaimer'
+    );
+
+    // Registrar elementos no observador
+    elementsToAnimate.forEach(element => {
+      observer.observe(element);
+    });
+
+    // Animação suave ao carregar a página
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelector('h1').style.opacity = '1';
+        document.querySelector('h1').style.transform = 'translateY(0)';
+      }, 300);
+    });
+  </script>
 </body>
 </html>
