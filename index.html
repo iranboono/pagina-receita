@@ -193,14 +193,59 @@
       transform: translateY(30px);
     }
     
-    .botao-topo { transition-delay: 0.2s; }
-    .botao-meio { transition-delay: 0.5s; }
-    .botao-rodape { transition-delay: 0.6s; }
+    .botao-topo { 
+      transition-delay: 0.2s;
+      animation: pulse 2s infinite;
+    }
+    
+    .botao-meio { 
+      transition-delay: 0.5s;
+      background: linear-gradient(135deg, var(--accent), var(--highlight));
+      box-shadow: 0 5px 25px rgba(139, 69, 19, 0.3);
+      animation: pulseDestaque 1.5s infinite;
+    }
+    
+    .botao-rodape { 
+      transition-delay: 0.6s;
+      background: linear-gradient(135deg, var(--accent), var(--highlight));
+      box-shadow: 0 5px 25px rgba(139, 69, 19, 0.3);
+      animation: pulseDestaque 1.5s infinite;
+    }
     
     .botao:hover {
       transform: translateY(-5px) scale(1.02) !important;
       box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      animation: none;
+    }
+    
+    .botao-meio:hover, .botao-rodape:hover {
+      box-shadow: 0 10px 30px rgba(139, 69, 19, 0.4);
+      background: linear-gradient(135deg, var(--highlight), var(--accent));
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    @keyframes pulseDestaque {
+      0% {
+        box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(139, 69, 19, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(139, 69, 19, 0);
+      }
     }
     
     .destaque {
@@ -356,10 +401,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="whatsapp-badge">
-      <i class="fab fa-whatsapp"></i> Receita via WhatsApp
-    </div>
+  <div class="whatsapp-badge">
+  <a href="https://wa.me/5521998509201?text=Ol%C3%A1%21%20Tenho%20interesse%20e%20queria%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor." 
+     style="color: white; text-decoration: none;"
+     onclick="fbq('track', 'Lead');">
+    <i class="fab fa-whatsapp"></i> Receita via WhatsApp
+  </a>
+</div>
     
     <h1>Transforme Sua Saúde Com Receitas Naturais</h1>
     
