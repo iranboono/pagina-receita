@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Receitas Naturais de Emagrecimento via WhatsApp</title>
+  <title>Receitas Naturais de Bem-Estar via WhatsApp</title>
   
   <!-- Facebook Pixel Code -->
   <script>
@@ -29,16 +29,17 @@
       --white: #FFFFFF;
       --accent: #D4A762;
       --highlight: #8B4513;
+      --urgent: #E74C3C;
     }
     
     body {
       font-family: 'Montserrat', 'Segoe UI', sans-serif;
       text-align: center;
-      padding: 20px;
+      padding: 10px;
       background-color: var(--secondary);
       min-height: 100vh;
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.5;
       background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
       background-attachment: fixed;
@@ -49,11 +50,11 @@
     
     .container {
       max-width: 650px;
-      margin: 40px auto;
-      padding: 40px;
+      margin: 20px auto;
+      padding: 25px 20px;
       background-color: var(--white);
-      border-radius: 15px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
       border: 1px solid rgba(212, 167, 98, 0.3);
@@ -65,67 +66,84 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 8px;
+      height: 6px;
       background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    }
+    
+    .hero-image {
+      width: calc(100% + 40px);
+      border-radius: 0;
+      margin: 20px -20px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .benefit-image {
+      width: 100%;
+      border-radius: 8px;
+      margin: 12px 0;
+      height: 140px;
+      object-fit: cover;
     }
     
     h1 {
       color: var(--highlight);
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      margin-bottom: 15px;
       line-height: 1.3;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease;
     }
     
     h2 {
       color: var(--accent);
-      font-size: 24px;
-      margin: 35px 0 20px;
+      font-size: 20px;
+      margin: 25px 0 15px;
       font-weight: 600;
       position: relative;
       display: inline-block;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease 0.2s;
     }
     
     h2::after {
       content: "";
       position: absolute;
-      bottom: -8px;
+      bottom: -6px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
+      width: 60px;
+      height: 2px;
       background: var(--accent);
     }
     
     .subtitle {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--light-text);
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-weight: 500;
       font-style: italic;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease 0.1s;
     }
     
     .benefit-card {
       background-color: rgba(212, 167, 98, 0.08);
-      border-radius: 12px;
-      padding: 25px;
-      margin: 25px 0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
       text-align: left;
       border-left: 4px solid var(--accent);
       transition: transform 0.3s ease, opacity 0.8s ease, transform 0.8s ease;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     
     .benefit-card:nth-child(1) { transition-delay: 0.3s; }
@@ -133,64 +151,64 @@
     .benefit-card:nth-child(3) { transition-delay: 0.5s; }
     
     .benefit-card:hover {
-      transform: translateY(-5px) !important;
+      transform: translateY(-3px) !important;
     }
     
     .benefit-card i {
       color: var(--accent);
-      font-size: 28px;
-      margin-right: 15px;
+      font-size: 24px;
+      margin-right: 12px;
       vertical-align: middle;
     }
     
     .benefit-card h3 {
       color: var(--highlight);
       display: inline-block;
-      margin: 0 0 12px 0;
-      font-size: 20px;
+      margin: 0 0 10px 0;
+      font-size: 18px;
       font-weight: 600;
     }
     
     .whatsapp-reason {
       background-color: rgba(37, 211, 102, 0.08);
-      border-radius: 12px;
-      padding: 25px;
-      margin: 30px 0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 25px 0;
       text-align: left;
       border: 1px dashed var(--primary);
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease 0.4s;
     }
     
     .whatsapp-reason i {
       color: var(--primary);
-      font-size: 24px;
-      margin-right: 12px;
+      font-size: 20px;
+      margin-right: 10px;
     }
     
     .botao {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: var(--white);
-      padding: 20px 40px;
+      padding: 16px 30px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 16px;
       border-radius: 50px;
       display: inline-block;
-      box-shadow: 0 5px 25px rgba(37, 211, 102, 0.3);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
       transition: all 0.3s ease, opacity 0.8s ease, transform 0.8s ease;
-      margin: 35px 0;
+      margin: 25px 0;
       position: relative;
       z-index: 2;
       border: none;
       cursor: pointer;
       width: 90%;
-      max-width: 350px;
+      max-width: 300px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     
     .botao-topo { 
@@ -201,26 +219,26 @@
     .botao-meio { 
       transition-delay: 0.5s;
       background: linear-gradient(135deg, var(--accent), var(--highlight));
-      box-shadow: 0 5px 25px rgba(139, 69, 19, 0.3);
+      box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
       animation: pulseDestaque 1.5s infinite;
     }
     
     .botao-rodape { 
       transition-delay: 0.6s;
       background: linear-gradient(135deg, var(--accent), var(--highlight));
-      box-shadow: 0 5px 25px rgba(139, 69, 19, 0.3);
+      box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
       animation: pulseDestaque 1.5s infinite;
     }
     
     .botao:hover {
-      transform: translateY(-5px) scale(1.02) !important;
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+      transform: translateY(-3px) scale(1.02) !important;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
       animation: none;
     }
     
     .botao-meio:hover, .botao-rodape:hover {
-      box-shadow: 0 10px 30px rgba(139, 69, 19, 0.4);
+      box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);
       background: linear-gradient(135deg, var(--highlight), var(--accent));
     }
     
@@ -229,7 +247,7 @@
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
       }
       70% {
-        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+        box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
       }
       100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
@@ -241,11 +259,45 @@
         box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4);
       }
       70% {
-        box-shadow: 0 0 0 10px rgba(139, 69, 19, 0);
+        box-shadow: 0 0 0 8px rgba(139, 69, 19, 0);
       }
       100% {
         box-shadow: 0 0 0 0 rgba(139, 69, 19, 0);
       }
+    }
+    
+    .urgent-badge {
+      background-color: var(--urgent);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-block;
+      margin: 15px 0;
+      animation: pulseUrgent 1.5s infinite;
+      transform: rotate(-2deg);
+    }
+    
+    @keyframes pulseUrgent {
+      0% { transform: rotate(-2deg) scale(1); }
+      50% { transform: rotate(-2deg) scale(1.05); }
+      100% { transform: rotate(-2deg) scale(1); }
+    }
+    
+    .timer-container {
+      background-color: rgba(231, 76, 60, 0.1);
+      border: 1px dashed var(--urgent);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px 0;
+      font-weight: 700;
+      color: var(--urgent);
+    }
+    
+    #countdown {
+      font-size: 18px;
+      margin: 5px 0;
     }
     
     .destaque {
@@ -256,30 +308,30 @@
     .whatsapp-badge {
       background-color: var(--primary);
       color: white;
-      padding: 8px 20px;
+      padding: 8px 15px;
       border-radius: 50px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease;
     }
     
     .recipe-preview {
       background: linear-gradient(135deg, #f8f8f8, #f5efe4);
-      border-radius: 15px;
-      padding: 25px;
-      margin: 30px 0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
       border: 1px dashed var(--accent);
       position: relative;
       text-align: left;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease 0.3s;
     }
     
@@ -287,28 +339,29 @@
       content: "Prévia";
       position: absolute;
       top: -12px;
-      left: 25px;
+      left: 20px;
       background: var(--white);
-      padding: 0 15px;
+      padding: 0 10px;
       color: var(--highlight);
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
       border: 1px dashed var(--accent);
-      border-radius: 15px;
+      border-radius: 12px;
     }
     
     .recipe-preview h3 {
       color: var(--highlight);
       margin-top: 0;
-      font-size: 22px;
+      font-size: 18px;
     }
     
     .recipe-preview ul {
-      padding-left: 25px;
+      padding-left: 20px;
+      font-size: 14px;
     }
     
     .recipe-preview li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       position: relative;
     }
     
@@ -323,48 +376,57 @@
     
     .testimonial {
       background-color: rgba(212, 167, 98, 0.08);
-      border-radius: 15px;
-      padding: 25px;
-      margin: 35px 0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
       text-align: center;
       border: 1px solid rgba(212, 167, 98, 0.3);
       position: relative;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease 0.5s;
+    }
+    
+    .testimonial img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 10px;
+      border: 2px solid var(--accent);
     }
     
     .testimonial i {
       color: var(--accent);
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 24px;
+      margin-bottom: 10px;
       opacity: 0.7;
     }
     
     .testimonial p {
       font-style: italic;
-      margin: 15px 0;
-      font-size: 16px;
-      line-height: 1.7;
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 1.6;
     }
     
     .testimonial .author {
       font-weight: 700;
       color: var(--highlight);
-      font-size: 15px;
+      font-size: 13px;
     }
     
     .disclaimer {
-      font-size: 12px;
+      font-size: 11px;
       color: var(--light-text);
-      margin-top: 50px;
-      line-height: 1.7;
+      margin-top: 30px;
+      line-height: 1.6;
       position: relative;
       z-index: 3;
-      padding-top: 20px;
+      padding-top: 15px;
       border-top: 1px solid rgba(212, 167, 98, 0.3);
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s ease 0.6s;
     }
     
@@ -372,62 +434,52 @@
       opacity: 1;
       transform: translateY(0);
     }
-    
-    @media (max-width: 768px) {
-      .container {
-        padding: 30px 20px;
-        margin: 20px auto;
-      }
-      
-      h1 {
-        font-size: 26px;
-      }
-      
-      h2 {
-        font-size: 22px;
-      }
-      
-      .botao {
-        padding: 18px 30px;
-        font-size: 16px;
-      }
-      
-      .recipe-preview, .benefit-card, .whatsapp-reason {
-        padding: 20px;
-      }
-    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="whatsapp-badge">
-  <a href="https://wa.me/5521998509201?text=Ol%C3%A1%21%20Tenho%20interesse%20e%20queria%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor." 
-     style="color: white; text-decoration: none;"
-     onclick="fbq('track', 'Lead');">
-    <i class="fab fa-whatsapp"></i> Receita via WhatsApp
-  </a>
-</div>
+  <div class="container">
+    <div class="whatsapp-badge">
+      <a href="https://wa.me/5521998509201?text=Ol%C3%A1%21%20Tenho%20interesse%20e%20queria%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor." 
+         style="color: white; text-decoration: none;"
+         onclick="fbq('track', 'Lead');">
+        <i class="fab fa-whatsapp"></i> Receita via WhatsApp
+      </a>
+    </div>
     
-    <h1>Transforme Sua Saúde Com Receitas Naturais</h1>
+    <div class="urgent-badge">ÚLTIMAS VAGAS DISPONÍVEIS!</div>
     
-    <p class="subtitle">Descubra combinações poderosas que ajudam a desinchar, acelerar o metabolismo e melhorar seu bem-estar</p>
+    <h1>Receitas Aprovadas Por Mulheres de 25 a 48 Anos</h1>
+    
+    <p class="subtitle">Descubra combinações deliciosas que ajudam você a conquistar seus objetivos com prazer e bem-estar!</p>
+    
+    <div class="timer-container">
+      <div>OFERTA TERMINA EM:</div>
+      <div id="countdown">15:00</div>
+      <div style="font-size:14px;">Pegue sua receita antes que esta página saia do ar!</div>
+    </div>
+    
+    <!-- Imagem Hero -->
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+         alt="Prato saudável com ingredientes naturais" 
+         class="hero-image animate">
     
     <!-- PRIMEIRO BOTÃO (TOPO) -->
     <a 
       href="https://wa.me/5521998509201?text=Ol%C3%A1%21%20Tenho%20interesse%20e%20queria%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor."
       class="botao botao-topo"
       onclick="fbq('track', 'Lead');">
-      <i class="fab fa-whatsapp"></i> Quero Receber Agora
+      <i class="fab fa-whatsapp"></i> QUERO RECEBER AGORA
     </a>
     
     <div class="recipe-preview">
-      <h3>Chá Desintoxicante (Prévia)</h3>
+      <h3>Smoothie Energético (Prévia)</h3>
       <ul>
-        <li>Ervas selecionadas para limpeza do organismo</li>
-        <li>Combinação que reduz inchaço</li>
-        <li>Estimula a digestão e metabolismo</li>
-        <li>Preparo simples e rápido</li>
+        <li>Ingredientes naturais para disposição</li>
+        <li>Combinação que ajuda na saciedade</li>
+        <li>Fonte de vitaminas e minerais</li>
+        <li>Preparo rápido em 3 minutos</li>
       </ul>
     </div>
     
@@ -435,17 +487,26 @@
     
     <div class="benefit-card">
       <h3><i class="fas fa-bolt"></i> Energia Natural</h3>
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+           alt="Mulher se exercitando com energia" 
+           class="benefit-image">
       <p>Ingredientes que fornecem energia sustentável sem os altos e baixos do café, ajudando você a se sentir mais disposto durante o dia.</p>
     </div>
     
     <div class="benefit-card">
-      <h3><i class="fas fa-weight"></i> Controle do Peso</h3>
-      <p>Combinações que ajudam a regular o apetite e o metabolismo, facilitando a perda de peso de forma saudável e gradual.</p>
+      <h3><i class="fas fa-heartbeat"></i> Bem-Estar Diário</h3>
+      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+           alt="Mulher meditando e relaxando" 
+           class="benefit-image">
+      <p>Receitas desenvolvidas para melhorar sua disposição e qualidade de vida de forma natural e saborosa.</p>
     </div>
     
     <div class="benefit-card">
       <h3><i class="fas fa-heart"></i> Saúde Integral</h3>
-      <p>Benefícios que vão além do emagrecimento, melhorando sua saúde digestiva, sono e bem-estar geral.</p>
+      <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+           alt="Mulher feliz e saudável" 
+           class="benefit-image">
+      <p>Benefícios que vão além da alimentação, melhorando sua saúde digestiva, sono e bem-estar geral.</p>
     </div>
     
     <!-- SEGUNDO BOTÃO (MEIO) -->
@@ -453,7 +514,7 @@
       href="https://wa.me/5521998509201?text=Ol%C3%A1%21%20Tenho%20interesse%20e%20queria%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor."
       class="botao botao-meio"
       onclick="fbq('track', 'Lead');">
-      <i class="fab fa-whatsapp"></i> Enviar Receita Para Mim
+      <i class="fab fa-whatsapp"></i> GARANTIR MINHA VAGA
     </a>
     
     <div class="whatsapp-reason">
@@ -465,9 +526,11 @@
     </div>
     
     <div class="testimonial">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+           alt="Depoimento de cliente satisfeita">
       <i class="fas fa-quote-left"></i>
-      <p>"Depois que comecei a seguir essas receitas, não só perdi medidas como minha pele melhorou muito. Me sinto mais leve e com mais energia no dia a dia!"</p>
-      <div class="author">- Carla, 34 anos</div>
+      <p>"Depois que comecei a seguir essas receitas, minha energia durante o dia melhorou muito. Me sinto mais leve e com mais disposição!"</p>
+      <div class="author">- Ana Clara, 38 anos</div>
     </div>
     
     <!-- TERCEIRO BOTÃO (RODAPÉ) -->
@@ -475,7 +538,7 @@
       href="https://wa.me/5521998509201?text=Ol%C3%A1%21%20Tenho%20interesse%20e%20queria%20mais%20informa%C3%A7%C3%B5es%2C%20por%20favor."
       class="botao botao-rodape"
       onclick="fbq('track', 'Lead');">
-      <i class="fab fa-whatsapp"></i> Quero Minha Receita
+      <i class="fab fa-whatsapp"></i> QUERO ANTES QUE ACABE
     </a>
     
     <div class="disclaimer">
@@ -498,7 +561,7 @@
 
     // Elementos que serão observados
     const elementsToAnimate = document.querySelectorAll(
-      'h1, .subtitle, .whatsapp-badge, .botao, .recipe-preview, h2, .benefit-card, .whatsapp-reason, .testimonial, .disclaimer'
+      'h1, .subtitle, .whatsapp-badge, .botao, .recipe-preview, h2, .benefit-card, .whatsapp-reason, .testimonial, .disclaimer, .hero-image, .urgent-badge, .timer-container'
     );
 
     // Registrar elementos no observador
@@ -506,13 +569,53 @@
       observer.observe(element);
     });
 
-    // Animação suave ao carregar a página
-    window.addEventListener('load', () => {
+    // Contador regressivo
+    function startTimer(duration, display) {
+      let timer = duration, minutes, seconds;
+      const interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration;
+          // Recarrega o contador quando chegar a zero
+          display.textContent = "00:00";
+          clearInterval(interval);
+          startTimer(900, display); // Reinicia com 15 minutos
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
       setTimeout(() => {
         document.querySelector('h1').style.opacity = '1';
         document.querySelector('h1').style.transform = 'translateY(0)';
       }, 300);
-    });
+      
+      const fifteenMinutes = 60 * 15,
+          display = document.querySelector('#countdown');
+      startTimer(fifteenMinutes, display);
+    };
+
+    // Efeito de digitação no título
+    const title = document.querySelector('h1');
+    const originalText = title.textContent;
+    title.textContent = '';
+    
+    let i = 0;
+    const typingEffect = setInterval(() => {
+      if (i < originalText.length) {
+        title.textContent += originalText.charAt(i);
+        i++;
+      } else {
+        clearInterval(typingEffect);
+      }
+    }, 50);
   </script>
 </body>
 </html>
